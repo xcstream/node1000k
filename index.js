@@ -10,7 +10,6 @@ server = net.createServer(function(sock) {
 console.log('listen tcp://127.0.0.1:1926')
 server.on('connection',function () {
     count++
-    console.log('connection count:',count)
 })
 
 server.on('error', function(err){
@@ -30,10 +29,10 @@ function create() {
         });
     }
     setTimeout(function () {
-        console.log('connect count:',count)
+        console.log('connection count:',count)
     },200)
 }
-setInterval(create,1000)
+setInterval(create,200)
 
 
 
