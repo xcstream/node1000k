@@ -27,7 +27,9 @@ function create() {
         client.connect(PORT, '127.0.0.1', function() {
         });
         client.on('error',function (err) {
-            console.log(err)
+            console.log('cannot connect at ',count)
+            process.exit()
+
         })
     }
     setTimeout(function () {
