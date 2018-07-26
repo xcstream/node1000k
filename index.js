@@ -21,12 +21,6 @@ for (var port = PORT;port <  PORT+range;port++){
 }
 console.log('listen port',PORT,'-',port)
 
-setTimeout(function () {
-    console.log('connections ',count)
-},1000)
-
-console.log('start.')
-
 function create() {
     for(var i=0;i<range;i++){
         var client = new net.Socket();

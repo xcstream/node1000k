@@ -1,6 +1,6 @@
 {
   "name": "node1000k",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "test num of max connections",
   "main": "index.js",
   "bin": "./node1000k",
