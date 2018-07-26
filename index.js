@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 var net = require('net');
 
