@@ -21,7 +21,7 @@ server.on('close', function(){
 
 console.log('start.')
 function create() {
-    for(var i=0;i<1;i++){
+    for(var i=0;i<100;i++){
         var client = new net.Socket();
         client.connect(PORT, '127.0.0.1', function() {
         });
