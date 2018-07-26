@@ -1,13 +1,12 @@
 var net = require('net');
 
-var HOST = '127.0.0.1';
 var PORT = 1926;
 var count = 0
 
 server = net.createServer(function(sock) {
-}).listen(PORT, HOST);
+}).listen(PORT);
 
-console.log('listen tcp://127.0.0.1:1926')
+console.log('listen port 1926')
 server.on('connection',function () {
     count++
 })
@@ -25,7 +24,7 @@ console.log('start.')
 function create() {
     for(var i=0;i<100;i++){
         var client = new net.Socket();
-        client.connect(PORT, HOST, function() {
+        client.connect(PORT, '127.0.0.1', function() {
         });
     }
     setTimeout(function () {
