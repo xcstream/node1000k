@@ -30,7 +30,7 @@ function create() {
         });
     }
 }
-setTimeout(create(),1000)
+setTimeout(create,1000)
 
 
 
