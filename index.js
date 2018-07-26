@@ -30,9 +30,9 @@ function create() {
     }
     setTimeout(function () {
         console.log('connection count:',count)
-    },200)
+    },100)
 }
-setInterval(create,200)
+setInterval(create,100)
 
 
 
