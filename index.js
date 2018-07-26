@@ -29,6 +29,9 @@ function create() {
         client.connect(PORT, HOST, function() {
         });
     }
+    setTimeout(function () {
+        console.log('connect count:',count)
+    },200)
 }
 setInterval(create,1000)
 
