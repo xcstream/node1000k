@@ -26,6 +26,9 @@ function create() {
         var client = new net.Socket();
         client.connect(PORT, '127.0.0.1', function() {
         });
+        client.on('error',function (err) {
+            console.log(err)
+        })
     }
     setTimeout(function () {
         console.log('connection count:',count)
