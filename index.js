@@ -23,12 +23,14 @@ server.on('close', function(){
 });
 
 console.log('start.')
-
-while(1) {
-    var client = new net.Socket();
-    client.connect(PORT, HOST, function() {
-    });
+function create() {
+    for(var i=0;i<100;i++){
+        var client = new net.Socket();
+        client.connect(PORT, HOST, function() {
+        });
+    }
 }
+setTimeout(create(),1000)
 
 
 
