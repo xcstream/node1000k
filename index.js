@@ -24,7 +24,7 @@ server.on('close', function(){
 
 console.log('start.')
 
-for(var i=0;i<1000;i++){
+while(1) {
     var client = new net.Socket();
     client.connect(PORT, HOST, function() {
     });
