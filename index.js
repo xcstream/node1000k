@@ -13,7 +13,6 @@ server.on('connection',function () {
 
 server.on('error', function(err){
     console.log('Server error:', err.message);
-
 });
 
 server.on('close', function(){
@@ -22,21 +21,18 @@ server.on('close', function(){
 
 console.log('start.')
 function create() {
-    for(var i=0;i<100;i++){
+    for(var i=0;i<1;i++){
         var client = new net.Socket();
         client.connect(PORT, '127.0.0.1', function() {
         });
         client.on('error',function (err) {
             console.log('cannot connect at ',count)
             process.exit()
-
         })
     }
-    setTimeout(function () {
-        console.log('connection count:',count)
-    },100)
+    console.log('connection count:',count)
 }
-setInterval(create,100)
+setInterval(create,0)
 
 
 
