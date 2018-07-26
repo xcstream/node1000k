@@ -4,7 +4,7 @@ var PORT = 1926;
 var count = 0
 
 
-for (var port = PORT;port <  PORT+100;port++){
+for (var port = PORT;port <  PORT+300;port++){
     var server = net.createServer(function(sock){}).listen(port);
     server.on('connection',function () {
         count++
@@ -27,7 +27,7 @@ setTimeout(function () {
 console.log('start.')
 
 function create() {
-    for(var i=0;i<100;i++){
+    for(var i=0;i<300;i++){
         var client = new net.Socket();
         client.connect(PORT+i, '127.0.0.1', function() {
         });
